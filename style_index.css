@@ -107,7 +107,7 @@ nav div{
 	border-radius: 5px;
 	border: 2px solid #c80000;
 	flex-direction: column;
-	width: calc(100% / 4 - 44px);
+	width: calc(100% / 1 - 44px);
 	margin: 5px;
   	animation: borda_colorida linear 5s infinite;
   	background: linear-gradient(30deg, #000 50%, #c8000080 95%);
@@ -183,7 +183,7 @@ nav div{
     border-radius: 5px;
     aborder: 2px solid #c80000;
     flex-direction: column;
-    awidth: calc(100% / 3 - 44px);
+    awidth: calc(100% / 1 - 44px);
     margin: 5px;
     animation: borda_colorida linear 5s infinite;
     abackground: linear-gradient(180deg, #000 0%, #c8000080 100%);
