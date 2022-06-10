@@ -1,0 +1,241 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto Mono', monospace;
+	auser-select: none;
+	color: black;
+}
+
+body{
+	background-color: white;
+}
+
+/* Padrão */
+button{
+	margin: 10px;
+    padding: 10px 20px;
+}
+
+mark{
+    color: white;
+    background-color: #c80000;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+/* Container */
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* Área Menu */
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e6e6e6;
+
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    z-index: 10000000000000000000000;
+}
+
+nav .area_menu_celular{
+    height: 56px;
+    padding: 0px 16px;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul{
+
+}
+
+nav ul li{
+    display: flex;
+}
+
+nav ul li a{
+    padding: 5px;
+    margin: 5px;
+}
+
+/* Box Padrão */
+
+.box{
+    padding: 25px 50px;
+}
+
+.box .sobrepor i{
+    font-size: 20px;
+    color: #c80000;
+    cursor: pointer;
+}
+
+
+/* Itens do Box */
+
+.box .alinhamento{
+    display: flex;
+    flex-flow: wrap;
+}
+
+.box .alinhamento .item{
+    height: auto;
+    aspect-ratio: 16 / 9;
+    width: calc(100% / 3 - 5px);
+    display: flex;
+    padding: 2.5px;
+    position: relative;
+    transition: 1s;
+    z-index: 1;
+}
+
+.box .alinhamento .item:hover{
+    transform: scale(1.15);
+    z-index: 1000;
+    transition: 1s;
+    z-index: 2;
+}
+
+.box .alinhamento .item .sobrepor{
+    position: absolute;
+    width: calc(100% - 5px);
+    height: calc(100% - 5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0 0 0 / 50%);
+    opacity: 0%;
+    transition: 1s;
+}
+
+.box .alinhamento .item .sobrepor:hover{
+    opacity: 100%;
+    transition: 1s;
+}
+
+.box .alinhamento .item .sobrepor .preco{
+    font-size: 25px;
+    color: white;
+    user-select: none;
+}
+
+.box .alinhamento .item img{
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+
+
+/* Rodapé */
+
+footer{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px;
+}
+
+footer span{
+    color: white;
+}
+
+footer .icon_redes{
+    user-select: none;
+}
+
+footer .icon_redes a{
+    margin: 5px;
+}
+
+footer .icon_redes a i{
+    color: white;
+    font-size: 20px;
+}
+
+#botao_menu_aparecer{
+    display: none;
+}
+
+#botao_menu_apagar{
+    display: none;
+}
+
+
+
+
+
+
+/* Modelo Celular até 720px */
+@media only screen and (max-width: 720px) {
+    nav{
+        display: block;
+   }
+
+   nav .area_menu_celular{
+        display: flex; 
+        justify-content: space-between;
+        width: auto;
+    }
+
+    nav ul{
+        display: none;
+    }
+
+    nav ul li{
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav ul li a:hover{
+        padding: 10px;
+        margin: 0;
+    }
+
+    nav ul li a:hover{
+        background-color: black;
+        color: white;
+    }
+
+    #botao_menu_aparecer{
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+        border: transparent;
+    }
+
+    #botao_menu_apagar{
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+        border: transparent;
+    }
+}
